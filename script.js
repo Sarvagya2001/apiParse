@@ -21,11 +21,13 @@ function displayData(products) {
   const tableBody = document.getElementById('tableBody');
 
   products.forEach(product => {
-    const row = tableBody.insertRow();
-    const titleCell = row.insertCell(0);
-    const priceCell = row.insertCell(1);
-    const popularityCell = row.insertCell(2);
+    const row = tBody.insertRow();
+    const subCategoryCell = row.insertCell(0)
+    const titleCell = row.insertCell(1);
+    const priceCell = row.insertCell(2);
+    const popularityCell = row.insertCell(3);
 
+    subCategoryCell.textContent=product.subcategory;
     titleCell.textContent = product.title;
     priceCell.textContent = product.price;
     popularityCell.textContent = product.popularity;
